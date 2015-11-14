@@ -37,13 +37,24 @@ namespace TddIntroduction.Tests
             string x = fb.Query(i);
             Assert.AreEqual(x, "Fizz");
         }
+
+        [TestMethod]
+        public void When_Dividable_By_3_Expect_Fizz()
+        {
+            int i = 6;
+
+            FizzBuzz fb = new FizzBuzz();
+
+            string x = fb.Query(i);
+            Assert.AreEqual(x, "Fizz");
+        }
     }
 
     internal class FizzBuzz
     {
         internal string Query(int i)
         {
-            if (i == 3)
+            if (i % 3 == 0)
                 return "Fizz";
             if (i == 5)
                 return "Buzz";
