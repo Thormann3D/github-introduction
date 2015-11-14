@@ -7,6 +7,17 @@ namespace TddIntroduction.Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void When_15_Expect_Fuzzbuzz()
+        {
+            int i = 15;
+
+            FizzBuzz fb = new FizzBuzz();
+
+            string x = fb.Query(i);
+            Assert.AreEqual(x, "FizzBuzz");
+        }
+
+        [TestMethod]
         public void When_Not_3_And_Not_5_Return_Number()
         {
             int i = 4;
@@ -47,6 +58,8 @@ namespace TddIntroduction.Tests
                 return "Fizz";
             if (i == 5)
                 return "Buzz";
+            if (i == 15)
+                return "FizzBuzz";
             if (i != 3 && i != 5)
                 return i.ToString();
             return "Buh";
