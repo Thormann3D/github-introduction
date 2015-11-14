@@ -18,6 +18,17 @@ namespace TddIntroduction.Tests
         }
 
         [TestMethod]
+        public void When_Dvidable_By_15_Expect_Fuzzbuzz()
+        {
+            int i = 15;
+
+            FizzBuzz fb = new FizzBuzz();
+
+            string x = fb.Query(i);
+            Assert.AreEqual(x, "FizzBuzz");
+        }
+
+        [TestMethod]
         public void When_Not_3_And_Not_5_Return_Number()
         {
             int i = 4;
@@ -39,6 +50,17 @@ namespace TddIntroduction.Tests
             Assert.AreEqual(x, "Buzz");
         }
         [TestMethod]
+        public void When_Divideble_By_5_Expect_Buzz()
+        {
+            int i = 5;
+
+            FizzBuzz fb = new FizzBuzz();
+
+            string x = fb.Query(i);
+            Assert.AreEqual(x, "Buzz");
+        }
+
+        [TestMethod]
         public void When_3_Expect_Fizz()
         {
             int i = 3;
@@ -50,7 +72,7 @@ namespace TddIntroduction.Tests
         }
 
         [TestMethod]
-        public void When_Dividable_By_3_Expect_Fizz()
+        public void When_Dvidable_By_i3_Expect_Fizz()
         {
             int i = 6;
 
@@ -65,12 +87,12 @@ namespace TddIntroduction.Tests
     {
         internal string Query(int i)
         {
+            if (i % 3 == 0 && i % 5 == 0)
+                return "FizzBuzz";
             if (i % 3 == 0)
                 return "Fizz";
-            if (i == 5)
+            if (i % 5 == 0)
                 return "Buzz";
-            if (i == 15)
-                return "FizzBuzz";
             if (i != 3 && i != 5)
                 return i.ToString();
             return "Buh";
