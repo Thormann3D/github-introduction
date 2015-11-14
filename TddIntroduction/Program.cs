@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TddIntroduction.Tests;
 
 namespace TddIntroduction
 {
@@ -10,25 +11,14 @@ namespace TddIntroduction
     {
         static void Main(string[] args)
         {
+            int i = 0;
+            while (i <= 99) {
+                i++;
+                FizzBuzz fb = new FizzBuzz();
+                fb.Query(i);
+                Console.WriteLine(fb.Query(i));
+            }
             Console.ReadLine();
         }
-
-        //public static void DoFizzBuzz()
-        //{
-        //    for (int i = 1; i <= 100; i++)
-        //    {
-        //        bool fizz = i % 3 == 0;
-        //        bool buzz = i % 5 == 0;
-
-        //        if (fizz && buzz)
-        //            Console.WriteLine("FizzBuzz");
-        //        else if (fizz)
-        //            Console.WriteLine("Fizz");
-        //        else if (buzz)
-        //            Console.WriteLine("Buzz");
-        //        else
-        //            Console.WriteLine(i);
-        //    }
-        //}
     }
 }

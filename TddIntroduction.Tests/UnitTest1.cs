@@ -83,9 +83,9 @@ namespace TddIntroduction.Tests
         }
     }
 
-    internal class FizzBuzz
+    public class FizzBuzz
     {
-        internal string Query(int i)
+        public string Query(int i)
         {
             if (i % 3 == 0 && i % 5 == 0)
                 return "FizzBuzz";
