@@ -14,6 +14,7 @@ namespace TddIntroduction.Tests
             FizzBuzz fb = new FizzBuzz();
 
             string x = fb.Query(i);
+            Assert.AreEqual(x, i.ToString());
         }
 
         [TestMethod]
@@ -46,6 +47,8 @@ namespace TddIntroduction.Tests
                 return "Fizz";
             if (i == 5)
                 return "Buzz";
+            if (i != 3 && i != 5)
+                return i.ToString();
             return "Buh";
         }
     }
